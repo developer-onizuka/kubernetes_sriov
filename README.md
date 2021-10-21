@@ -133,7 +133,7 @@ EOF
       sudo apt-get install -y -q kubelet kubectl kubeadm
       cat <<EOF > /etc/rc.local
 #!/bin/sh
-sudo iptables -t nat -A POSTROUTING -s 192.168.0.0/16 -j SNAT --to 192.168.33.101
+sudo iptables -t nat -A POSTROUTING -s 192.168.0.0/16 -j SNAT --to 192.168.200.101
 EOF
       chmod 775 /etc/rc.local
     SHELL
@@ -189,7 +189,7 @@ EOF
       sudo apt-get install -y -q kubelet kubectl kubeadm
       cat <<EOF > /etc/rc.local
 #!/bin/sh
-sudo iptables -t nat -A POSTROUTING -s 192.168.0.0/16 -j SNAT --to 192.168.33.102
+sudo iptables -t nat -A POSTROUTING -s 192.168.0.0/16 -j SNAT --to 192.168.200.102
 EOF
       chmod 775 /etc/rc.local
     SHELL
@@ -197,3 +197,7 @@ EOF
 #--------------------
 end
 ```
+
+# 3. Run workloads
+See the URL below:
+- https://github.com/developer-onizuka/kubernetes
