@@ -201,3 +201,5 @@ end
 # 3. Run workloads
 See the URL below:
 - https://github.com/developer-onizuka/kubernetes
+
+You can confirm if the data between pods goes trough Embedded switch on i350 NIC by making the PF port Link-downed. 
